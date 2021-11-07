@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "feed_items")
 data class FeedItemEntity(
-    @ColumnInfo val configuration: String,
-    @PrimaryKey val feedId: String,
-    @ColumnInfo val isNew: Boolean,
-    @ColumnInfo val isPremium: Boolean,
-    @ColumnInfo val templateName: String,
-    @ColumnInfo val templateThumbnailURI: String
+    @ColumnInfo (name = "configuration") val configuration: String,
+    @ColumnInfo (name ="id") @PrimaryKey  val feedId: String,
+    @ColumnInfo (name ="isNew") val isNew: Boolean,
+    @ColumnInfo (name ="isPremium") val isPremium: Boolean,
+    @ColumnInfo (name ="templateName") val templateName: String,
+    @ColumnInfo (name ="templateThumbnailURI") val templateThumbnailURI: String
 )
